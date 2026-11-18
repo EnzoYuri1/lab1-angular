@@ -1,0 +1,85 @@
+<section class="home">
+  <div class="cabecalho-pagina">
+    <div>
+      <h2>Home</h2>
+      <p class="subtitulo">Data binding, diretivas e tarefas carregadas com HttpClient.</p>
+    </div>
+    <span class="selo">Etapa 5</span>
+  </div>
+
+  <div class="grade">
+    <article class="cartao">
+      <h3>Boas-vindas</h3>
+
+      <p class="boas-vindas">Bem-vindo, {{ nome }}!</p>
+
+      <label for="nome">Seu nome:</label>
+      <input
+        id="nome"
+        name="nome"
+        type="text"
+        [(ngModel)]="nome"
+        placeholder="Digite seu nome"
+        autocomplete="name"
+      />
+      <p class="ajuda">A mensagem acima é atualizada automaticamente enquanto você digita.</p>
+    </article>
+
+    <article class="cartao">
+      <h3>Contador</h3>
+
+      <p class="contador" aria-live="polite">{{ contador }}</p>
+
+      <div class="acoes">
+        <button type="button" class="botao botao-primario" (click)="incrementar()">
+          Cliquei {{ contador }} vezes
+        </button>
+        <button
+          type="button"
+          class="botao botao-secundario"
+          (click)="zerar()"
+          [disabled]="contador === 0"
+        >
+          Zerar
+        </button>
+      </div>
+      <p class="ajuda">O botão Zerar fica desabilitado quando o contador está em zero.</p>
+    </article>
+  </div>
+
+  <article class="cartao tarefas-cartao">
+    <div class="tarefas-topo">
+      <div>
+        <h3>Minhas tarefas</h3>
+        <p class="ajuda" *ngIf="!carregando && !erro">
+          {{ tarefas.length }} tarefas carregadas de <code>/assets/tarefas.json</code>.
+        </p>
+      </div>
+
+      <button type="button" class="botao botao-secundario" (click)="toggleLista()">
+        {{ mostrar ? 'Ocultar' : 'Mostrar' }} tarefas
+      </button>
+    </div>
+
+    <p class="estado" *ngIf="carregando">Carregando tarefas...</p>
+    <p class="erro" *ngIf="erro">{{ erro }}</p>
+
+    <ul class="lista-tarefas" *ngIf="mostrar && !carregando && !erro">
+      <li *ngFor="let t of tarefas; let i = index" [ngClass]="{ done: t.feito }">
+        <span class="numero">{{ i + 1 }}</span>
+
+        <span class="titulo-tarefa">{{ t.titulo }}</span>
+
+        <span class="status">{{ t.feito ? 'Concluída' : 'Pendente' }}</span>
+
+        <button type="button" class="botao botao-pequeno" (click)="marcar(i)">
+          {{ t.feito ? 'Desmarcar' : 'Concluir' }}
+        </button>
+      </li>
+    </ul>
+
+    <p class="estado" *ngIf="mostrar && !carregando && !erro && tarefas.length === 0">
+      Nenhuma tarefa encontrada.
+    </p>
+  </article>
+</section>

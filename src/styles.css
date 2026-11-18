@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--texto);
+  font-family:
+    'Segoe UI',
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    Arial,
+    sans-serif;
+  line-height: 1.6;
+}
+
+:root {
+  --azul: #2563eb;
+  --azul-escuro: #1e3a8a;
+  --azul-claro: #dbeafe;
+  --texto: #1f2937;
+  --texto-suave: #5b6472;
+  --borda: #dbe3ef;
+  --superficie: #ffffff;
+  --fundo: #f4f7fb;
+  --perigo: #b91c1c;
+  --sucesso: #15803d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+app-root > main {
+  flex: 1;
+  width: min(1080px, 100% - 2rem);
+  margin-inline: auto;
+}
+
+.container {
+  width: min(1080px, 100% - 2rem);
+  margin-inline: auto;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: var(--azul);
+}

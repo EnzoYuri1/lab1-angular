@@ -1,0 +1,55 @@
+.sobre {
+  max-width: 760px;
+  padding-top: 2rem;
+}
+
+h2 {
+  margin: 0;
+  color: var(--azul-escuro);
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  letter-spacing: -0.02em;
+}
+
+.sobre > p {
+  color: var(--texto-suave);
+}
+
+.destaque {
+  color: var(--texto) !important;
+  font-size: 1.1rem;
+}
+
+.cartao {
+  margin-top: 1.25rem;
+  padding: 1.5rem;
+  border: 1px solid var(--borda);
+  border-radius: 0.9rem;
+  background: var(--superficie);
+  box-shadow: 0 6px 18px rgba(30, 58, 138, 0.05);
+}
+
+h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.05rem;
+}
+
+ul {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--texto-suave);
+}
+
+p {
+  margin: 0;
+  color: var(--texto-suave);
+}
+
+code {
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.3rem;
+  background: #f1f5f9;
+  color: var(--azul-escuro);
+  font-size: 0.85rem;
+}

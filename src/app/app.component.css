@@ -1,0 +1,94 @@
+.topo {
+  background: linear-gradient(135deg, var(--azul-escuro), var(--azul));
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(30, 58, 138, 0.18);
+}
+
+.topo-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding-block: 1.1rem;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.logo {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.85rem;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.marca h1 {
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.marca p {
+  margin: 0.15rem 0 0;
+  color: #dbeafe;
+  font-size: 0.85rem;
+}
+
+nav {
+  display: flex;
+  gap: 0.35rem;
+  padding: 0.3rem;
+  border-radius: 0.8rem;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+nav a {
+  padding: 0.45rem 1rem;
+  border-radius: 0.55rem;
+  color: #eaf2ff;
+  font-size: 0.93rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+nav a.active {
+  background: #ffffff;
+  color: var(--azul);
+}
+
+.rodape {
+  margin-top: 2.5rem;
+  padding-block: 1.25rem;
+  border-top: 1px solid var(--borda);
+  background: #ffffff;
+  color: var(--texto-suave);
+  font-size: 0.85rem;
+}
+
+.rodape p {
+  margin: 0;
+}
+
+@media (max-width: 560px) {
+  .topo-conteudo {
+    justify-content: center;
+    text-align: left;
+  }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "titulo": "Estudar components",
+    "feito": true
+  },
+  {
+    "titulo": "Praticar diretivas",
+    "feito": false
+  },
+  {
+    "titulo": "Criar serviço com HttpClient",
+    "feito": false
+  }
+]
